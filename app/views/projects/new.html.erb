@@ -1,0 +1,24 @@
+<% provide(:title, 'New Project') %>
+
+<%= form_for @project, html: { class: "mt-5 mx-3" } do |f| %>
+  <% if f.object.errors.any? %>
+        <div class="bg-red-100 text-red-900 px-5 py-3 rounded-md">
+          <% f.object.errors.full_messages.each do |m| %>
+            <div><%= m %></div>
+          <% end %>
+        </div>
+      <% end %>
+
+  <%= f.text_field :name, class: "", placeholder: "Name" %>
+
+  <%= f.text_area :description, class: "", placeholder: "Description" %>
+
+  <div class="">
+    <div class="">
+      <div class="">Hours</div>
+    </div>
+    <%= f.number_field :amount, class: "", placeholder: "Amount", min: "0", step: "0.01" %>
+  </div>
+  <%= collection_select(:project, :group_id, Group.all, :id, :name, { :prompt => 'Group' }, class: " my-3" ) %>
+  <%= f.submit class: "" %>
+<% end %>
