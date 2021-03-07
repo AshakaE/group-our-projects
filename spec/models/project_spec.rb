@@ -13,7 +13,7 @@ RSpec.describe Project, type: :model do
   end
 
   describe 'validation check' do
-    it 'requires name and amount presence' do
+    it 'requires name, description and amount to be present' do
       project = Project.new(name: 'Capstone', description: nil, amount: 4).save
       expect(project).to be false
     end

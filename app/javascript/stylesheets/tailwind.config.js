@@ -1,3 +1,4 @@
+const colors = require("tailwindcss/colors");
 module.exports = {
   purge: [
     "./app/**/*.html.erb",
@@ -21,6 +22,7 @@ module.exports = {
           75: "#555E67",
           100: "#434b54",
         },
+        orange: colors.orange,
       },
     },
   },

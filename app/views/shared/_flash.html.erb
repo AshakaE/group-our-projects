@@ -1,0 +1,21 @@
+<div class="text-center max-w-3xl mx-auto mb-32">
+  <% if flash[:notice] %>
+    <div class="bg-green-100 text-green-900 px-5 py-3 rounded-md" role="alert">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <% if flash[:alert] %>
+    <div class="bg-red-100 text-red-900 px-5 py-3 rounded-md" role="alert">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+  <% if flash[:warning] %>
+    <div class="bg-orange-100 text-orange-900 px-5 py-3 rounded-md" role="alert">
+      <%= flash[:warning] %>
+    </div>
+  <% end %>
+</div>
+
+  
+  
+  
