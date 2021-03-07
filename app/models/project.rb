@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
   belongs_to :user
-  has_many :groups
+  belongs_to :group
 
   validates :name, presence: true, length: { in: 4..18 }
   validates :description, presence: true, length: { in: 10..160 }
