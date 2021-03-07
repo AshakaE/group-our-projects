@@ -1,0 +1,12 @@
+<% provide(:title, 'Projects') %>
+
+<div>
+  <div>
+    <h5>Total Amount</h5>
+    <p><%= number_with_precision(@projects.sum(:amount), :precision => 2) %> hrs</p>
+  </div>
+
+</div>
+<%= link_to new_project_path do %>
+  <span>NEW PROJECT</span>
+<% end %>

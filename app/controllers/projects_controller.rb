@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :logged_in_user, only: %i[new create show index]
+  before_action :signed_in_user, only: %i[new create show index]
 
   def new
     @project = Project.new
@@ -21,11 +21,11 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @project = Project.ug_incl.where(user_id: current_user.id).desc
+    @projects = Project.ug_incl.where(user_id: current_user.id).desc
   end
 
   def no_group
-    @project = Project.ug_incl.where({ group_id: nil, user_id: current_user.id }).desc
+    @projects = Project.ug_incl.where({ group_id: nil, user_id: current_user.id }).desc
   end
 
   private
