@@ -25,6 +25,18 @@ module.exports = {
         orange: colors.orange,
       },
     },
+    minHeight: {
+      0: "0",
+      "1": "5vh",
+      "2": "10vh",
+      "1/3": "20vh",
+      "1/4": "25vh",
+      "1/2": "50vh",
+      "3/4": "75vh",
+      "3/5": "80vh",
+      "4/5": "90vh",
+      full: "100vh",
+    },
   },
   variants: {
     extend: {},

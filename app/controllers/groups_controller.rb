@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   before_action :signed_in_user, only: %i[new create index show]
 
   def new
+    @icons = icons
     @group = Group.new
   end
 
@@ -11,6 +12,7 @@ class GroupsController < ApplicationController
       flash[:notice] = "'#{@group.name}' group created successfully!"
       redirect_to @group
     else
+      @icons = icons
       render 'new'
     end
   end
@@ -27,6 +29,6 @@ class GroupsController < ApplicationController
   private
 
   def group_params
-    params.require(:group).permit(:name, :user)
+    params.require(:group).permit(:name, :icon, :user)
   end
 end

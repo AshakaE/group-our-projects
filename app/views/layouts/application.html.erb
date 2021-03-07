@@ -12,11 +12,17 @@
   </head>
 
   <body class="font-body bg-primaryLight min-h-screen">
-    <div class="max-w-2xl flex items-center justify-center bg-gray-50 mx-auto min-h-screen ">
-      <div>
-        
+    
+    <div class="max-w-2xl flex flex-1 flex-col items-center justify-center bg-gray-50 mx-auto min-h-full">
+
+      <div class="content-start w-full min-h-2">
+        <% unless yield(:title) == 'Home' || yield(:title) == 'Profile' %>
+          <%= render  "layouts/nav" %>
+        <% end %>
       </div>
-      <%= yield %>
+    
+        <%= yield %>
+
     </div>
   </body>
 </html>
