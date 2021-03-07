@@ -3,10 +3,15 @@ Rails.application.routes.draw do
 
   get 'sign_up', to: 'users#new'
   post 'sign_up', to: 'users#create'
+
   get 'sign_in', to: 'users#signin'
   post 'sign_in', to: 'users#signedin'
+
   delete 'logout', to: 'users#destroy'
 
   resources :users, only: %i[create show]
+
+  resources :projects, only: %i[index show new create]
+
   root 'main#home'
 end
