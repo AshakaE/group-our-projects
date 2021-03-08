@@ -1,18 +1,65 @@
 <% provide(:title, 'Profile') %>
 
-<div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+<div class="min-h-full bg-gradient-to-bl from-primaryDark to-primaryLight py-12 sm:px-6 lg:px-14 w-full text-white">
 <%= render partial: 'shared/flash' %>
-<div class="max-w-md w-full space-y-8">
+<div class="w-full space-y-8">
   <div class="text-center mb-5">
     <img src="<%= current_user.icon %>" alt="" class="">
     <h4 class=""><%= current_user.name %></h4>
   </div>
 
   <ul class="">
-    <li class=""><%= link_to 'All my projects', projects_path %></li>
-    <li class=""><%= link_to 'All my external projects'%></li>
-    <li class=""><%= link_to 'All groups'%></li>
-    <li class=""><%= link_to  "Logout", logout_url, method: :delete %></li>
+    <li class="mb-6 flex">
+      <div class="inline-block pr-4">
+          <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center text-md h-10 w-10 border border-white rounded-full text-center">
+              <div class="fal fa-project-diagram"></div>
+            </div>
+          </div>
+      </div>
+      </i>
+      <div class="border-b border-white pt-2 w-full">
+        <%= link_to 'All my projects', projects_path %>
+      </div>
+    </li>
+    <li class="mb-6 flex">
+      <div class="inline-block pr-4">
+        <div class="flex justify-center items-center">
+          <div class="flex justify-center items-center text-md h-10 w-10 border border-white rounded-full text-center">
+            <div class="fal fa-tasks-alt"></div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b border-white pt-2 w-full">
+        <%= link_to 'All my external projects'%>
+      </div>
+    </li>
+    <li class="mb-6 flex">
+      <div class="inline-block pr-4">
+        <div class="flex justify-center items-center">
+          <div class="flex justify-center items-center text-md h-10 w-10 border border-white rounded-full text-center">
+            <div class="fal fa-layer-group"></div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b border-white pt-2 w-full">
+        <%= link_to 'All groups'%>
+      </div>
+    </li>
+    <li class="mb-6 flex ">
+      <div class="inline-block pr-4">
+        <div class="flex justify-center items-center">
+          <div class="flex justify-center items-center text-md h-10 w-10 border border-white rounded-full text-center">
+            <div class="fal fa-power-off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b border-white pt-2 w-full">
+        <%= link_to  "Logout", logout_url, method: :delete %>
+      </div>
+    </li>
   </ul>
 </div>
 </div>
+
+
