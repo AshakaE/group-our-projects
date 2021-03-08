@@ -3,8 +3,8 @@
 <div class="min-h-full bg-gradient-to-bl from-primaryDark to-primaryLight py-12 sm:px-6 lg:px-14 w-full text-white">
 <%= render partial: 'shared/flash' %>
 <div class="w-full space-y-8">
-  <div class="text-center mb-5">
-    <img src="<%= current_user.icon %>" alt="" class="">
+  <div class="text-center mb-5 flex flex-col">
+    <img src="<%= current_user.icon %>" alt="" class="rounded-full border h-32 w-32 mb-2 mx-auto">
     <h4 class="text-2xl"><%= current_user.name %></h4>
   </div>
 

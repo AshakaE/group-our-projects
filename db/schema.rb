@@ -37,21 +37,6 @@ ActiveRecord::Schema.define(version: 2021_03_07_130241) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "active_storage_variant_records", force: :cascade do |t|
-    t.bigint "blob_id", null: false
-    t.string "variation_digest", null: false
-    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
-  end
-
-  create_table "group_projects", force: :cascade do |t|
-    t.bigint "group_id", null: false
-    t.bigint "project_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["group_id"], name: "index_group_projects_on_group_id"
-    t.index ["project_id"], name: "index_group_projects_on_project_id"
-  end
-
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.string "icon"
@@ -81,9 +66,6 @@ ActiveRecord::Schema.define(version: 2021_03_07_130241) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "group_projects", "groups"
-  add_foreign_key "group_projects", "projects"
   add_foreign_key "groups", "users"
   add_foreign_key "projects", "groups"
   add_foreign_key "projects", "users"

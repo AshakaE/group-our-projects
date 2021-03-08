@@ -1,24 +1,42 @@
 <% provide(:title, 'New Project') %>
-
-<%= form_for @project, html: { class: "mt-5 mx-3" } do |f| %>
-  <% if f.object.errors.any? %>
-        <div class="bg-red-100 text-red-900 px-5 py-3 rounded-md">
-          <% f.object.errors.full_messages.each do |m| %>
-            <div><%= m %></div>
-          <% end %>
+<div class="min-h-5 flex items-center justify-center content-between flex-wrap bg-gray-50 w-full">
+<div class="w-full space-y-8">
+  <%= form_for @project, html: { class: "mt-5 mx-3" } do |f| %>
+    <% if f.object.errors.any? %>
+          <div class="bg-red-100 text-red-900 px-5 py-3 rounded-md">
+            <% f.object.errors.full_messages.each do |m| %>
+              <div><%= m %></div>
+            <% end %>
+          </div>
+        <% end %>
+      <div>
+        <%= f.text_field :name, class: "my-3 py-2 pl-4 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md border", placeholder: "Name" %>
+      </div>
+      <div>
+        <%= f.text_area :description, class: "border shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 pb-16 pl-4 pt-4 block w-full sm:text-sm border-gray-300 rounded-md", placeholder: "Description" %>
+      </div>
+      <div class="mt-1 flex rounded-md shadow-sm">
+          <span class="inline-flex items-center my-3 py-2 px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">Hours</span>
+          <%= f.number_field :amount, class: " border focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300 my-3 py-2 pl-4", placeholder: "Amount", min: "0", step: "0.01" %>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="w-full">
+          <%= collection_select(:project, :group_id, Group.all, :id, :name, { :prompt => 'Group' }, class: "mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" ) %>
         </div>
-      <% end %>
-
-  <%= f.text_field :name, class: "", placeholder: "Name" %>
-
-  <%= f.text_area :description, class: "", placeholder: "Description" %>
-
-  <div class="">
-    <div class="">
-      <div class="">Hours</div>
+        <div class="mt-6">
+          <%= f.submit class: "px-8 py-3 rounded-md bg-primaryLight hover:bg-primaryDark text-white cursor-pointer" %>
+        </div>
+      </div>
     </div>
-    <%= f.number_field :amount, class: "", placeholder: "Amount", min: "0", step: "0.01" %>
+  <% end %>
   </div>
-  <%= collection_select(:project, :group_id, Group.all, :id, :name, { :prompt => 'Group' }, class: " my-3" ) %>
-  <%= f.submit class: "" %>
-<% end %>
+</div>
+
+<div class="col-span-6 sm:col-span-3">
+                  <label for="country" class="block text-sm font-medium text-gray-700">Country / Region</label>
+                  <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>Mexico</option>
+                  </select>
+                </div>

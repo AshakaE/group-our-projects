@@ -1,8 +1,8 @@
  <% provide(:title, 'Projects') %>
 <div class="min-h-5 flex items-center justify-center content-between flex-wrap bg-gray-50 w-full">
-  <div class="w-full flex justify-between border-b-2">
-    <h5>Total Amount</h5>
-    <p><%= number_with_precision(@projects.sum(:amount), :precision => 2) %> hrs</p>
+  <div class="w-full flex justify-between items-center border-b-2 px-5 py-5">
+    <h5 class="text-xl">Total Amount</h5>
+    <p class="font-bold"><%= number_with_precision(@projects.sum(:amount), :precision => 2) %> hrs</p>
   </div>
 
   <div class="w-full text-center py-4 text-white bg-secondary px-6">
