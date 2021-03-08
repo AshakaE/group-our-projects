@@ -6,9 +6,9 @@ RSpec.describe Project, type: :model do
       t = Project.reflect_on_association(:user)
       expect(t.macro).to eq(:belongs_to)
     end
-    it 'should have many groups' do
-      t = Project.reflect_on_association(:groups)
-      expect(t.macro).to eq(:has_many)
+    it 'should belong to group' do
+      t = Project.reflect_on_association(:group)
+      expect(t.macro).to eq(:belongs_to)
     end
   end
 

@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'faker', '~> 1.9', '>= 1.9.1'
+gem 'rest-client', '~> 1.8'
 gem 'hirb', '~> 0.7.3'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
