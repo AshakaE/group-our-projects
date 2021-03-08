@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   delete 'logout', to: 'users#destroy'
 
+  get '/projects/no-group', to: 'projects#no_group'
+
   resources :users, only: %i[create show]
 
   resources :projects, only: %i[index show new create]

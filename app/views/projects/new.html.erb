@@ -24,19 +24,10 @@
           <%= collection_select(:project, :group_id, Group.all, :id, :name, { :prompt => 'Group' }, class: "mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" ) %>
         </div>
         <div class="mt-6">
-          <%= f.submit class: "px-8 py-3 rounded-md bg-primaryLight hover:bg-primaryDark text-white cursor-pointer" %>
+          <%= f.submit class: "px-8 py-3 rounded-md bg-primaryLight hover:bg-primaryDark text-white cursor-pointer duration-150" %>
         </div>
       </div>
     </div>
   <% end %>
   </div>
 </div>
-
-<div class="col-span-6 sm:col-span-3">
-                  <label for="country" class="block text-sm font-medium text-gray-700">Country / Region</label>
-                  <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                    <option>United States</option>
-                    <option>Canada</option>
-                    <option>Mexico</option>
-                  </select>
-                </div>
