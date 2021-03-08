@@ -16,6 +16,7 @@ module.exports = {
         primaryLight: "#3778c2",
         primaryDark: "#2D619D",
         secondary: "#5fb523",
+        secondaryDark: "#4c8f1c",
         tertiary: {
           25: "#989DA3",
           50: "#878A8F",
@@ -35,6 +36,7 @@ module.exports = {
       "3/4": "75vh",
       "3/5": "80vh",
       "4/5": "90vh",
+      "5": "95vh",
       full: "100vh",
     },
   },

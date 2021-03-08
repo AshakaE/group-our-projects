@@ -1,17 +1,19 @@
-<nav class="navbar navbar-dark bg-primaryDark">
-  <%# right-side burguer icon %>
-  <% unless signed_in_user %>
-    <a href="/">
-  <% else %>
-    <a href="/users/<%= current_user.id %>" class="burguer">
-    <%#= link_to current_user do %>
-  <% end %>
-    <button class="navbar-toggler">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </a>
+<nav class="navbar navbar-dark flex justify-between content-center w-full px-4">
+  <div class="self-center text-xl">
+    <% unless signed_in_user %>
+      <a href="/">
+    <% else %>
+      <a href="/users/<%= current_user.id %>" class="burguer">
 
-  <h4 class="title nav-item text-light mb-0 mx-auto text-center"><%= yield(:title).upcase %></h4>
+    <% end %>
+      <button class="">
+        <i class="far fa-bars text-white"></i>
+      </button>
+    </a>
+  </div>
 
-  <div class="nav-item"></div>
+  <div class="">
+    <h4 class="title nav-item text-light mb-0 mx-auto text-center font-bold text-white text-2xl"><%= yield(:title).upcase %></h4>
+  </div>
+  <div></div>
 </nav>
