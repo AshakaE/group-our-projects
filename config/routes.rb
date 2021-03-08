@@ -15,5 +15,7 @@ Rails.application.routes.draw do
 
   resources :projects, only: %i[index show new create]
 
+  resources :groups, only: %i[index show new create]
+
   root 'main#home'
 end
