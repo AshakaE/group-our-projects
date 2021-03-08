@@ -1,0 +1,35 @@
+<% provide(:title, 'New Group') %>
+<div class="min-h-5 flex items-center justify-center content-between flex-wrap bg-gray-50 w-full">
+<div class="w-full space-y-8">
+<%= form_for @group, html: { class: "mt-5 mx-3" } do |f| %>
+  <%= render  partial: 'shared/flash', locals: { model: @group } %>
+  <% if f.object.errors.any? %>
+        <div class="bg-red-100 text-red-900 px-5 py-3 rounded-md">
+          <% f.object.errors.full_messages.each do |m| %>
+            <div><%= m %></div>
+          <% end %>
+        </div>
+      <% end %>
+  <div>
+    <%= f.text_field :name, class: "my-3 py-2 pl-4 focus:ring-indigo-500 focus:border-red block w-full shadow-sm sm:text-sm border-gray-300 rounded-md border", placeholder: "Name" %>
+  </div>
+    <ul class="bg-white border border-gray-300 rounded-md">
+      <p class=" text-muted w-100 text-center border-b border-gray-300 py-2">select a group</p>
+        <div class="grid grid-cols-5">
+            <% 1.upto(20) do |i| %>
+              <li class="p-4 m-1">
+                <%= f.radio_button :icon, @icons[i]['link'], class: "focus:ring-secondary h-4 w-4 text-secondary border-gray-300" %>
+                <%= f.label :icon, value: @icons[i]['link'], class: "w-2 h-2 py-4" do %>
+                  <img src="<%= @icons[i]['link']%>" alt="" class="w-14 h-14">
+                <% end %>
+              </li>
+            <% end %>
+        </div>
+    </ul>
+
+  <div class="mt-6 flex flex-col items-center">
+     <%= f.submit class: "px-8 py-3 rounded-md bg-primaryLight hover:bg-primaryDark text-white cursor-pointer duration-150" %>
+  </div>
+<% end %>
+</div>
+</div>
