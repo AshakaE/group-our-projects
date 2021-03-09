@@ -2,19 +2,11 @@
 
 <div class="min-h-full bg-gradient-to-bl from-primaryDark to-primaryLight py-12 sm:px-6 lg:px-14 w-full text-white">
 <div class="w-full space-y-8">
-    <%= render partial: 'shared/flash' %>
   <div class="text-center mb-5 flex flex-col">
     <h1 class="mt-6 text-center text-3xl font-extrabold text-white mb-20">Edit Name</h1>  
     <img src="<%= current_user.icon %>" alt="" class="rounded-full border h-32 w-32 mb-2 mx-auto">
     <h4 class="text-2xl mb-6"><%= current_user.name %></h4>
     <%= form_with(model: @user, local: true) do |f| %>
-        <% if f.object.errors.any? %>
-        <div class="bg-red-100 text-red-900 px-5 py-3 rounded-md">
-          <% f.object.errors.full_messages.each do |m| %>
-            <div><%= m %></div>
-          <% end %>
-        </div>
-      <% end %>
         <div>
           <%= f.text_field :name, class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm", placeholder: "#{current_user.name}" %>
         </div>
@@ -46,6 +38,9 @@
             </div>
           </li>
         </ul>
+        
+      <%= render partial: 'shared/form_errors', locals:{ f: f} %>
+      <%= render partial: 'shared/flash' %>
   <% end %>
   </div>
 </div>

@@ -1,0 +1,7 @@
+    <% if f.object.errors.any? %>
+        <div class="bg-red-100 text-red-900 px-5 py-3 rounded-md">
+          <% f.object.errors.full_messages.each do |m| %>
+            <div><%= m %></div>
+          <% end %>
+        </div>
+      <% end %>

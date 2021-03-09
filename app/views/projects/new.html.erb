@@ -2,13 +2,7 @@
 <div class="min-h-5 flex items-center justify-center content-between flex-wrap bg-gray-50 w-full">
 <div class="w-full space-y-8">
   <%= form_for @project, html: { class: "mt-5 mx-3" } do |f| %>
-    <% if f.object.errors.any? %>
-          <div class="bg-red-100 text-red-900 px-5 py-3 rounded-md">
-            <% f.object.errors.full_messages.each do |m| %>
-              <div><%= m %></div>
-            <% end %>
-          </div>
-        <% end %>
+    <%= render partial: 'shared/form_errors', locals:{ f: f} %>
       <div>
         <%= f.text_field :name, class: "my-3 py-2 pl-4 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md border", placeholder: "Name" %>
       </div>

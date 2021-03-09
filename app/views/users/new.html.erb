@@ -1,13 +1,7 @@
   <% provide(:title, 'Home') %>
   <div class="max-w-md w-full space-y-8">
     <%= form_with model: @user, url: sign_up_path do |f| %>
-      <% if f.object.errors.any? %>
-        <div class="bg-red-100 text-red-900 px-5 py-3 rounded-md">
-          <% f.object.errors.full_messages.each do |m| %>
-            <div><%= m %></div>
-          <% end %>
-        </div>
-      <% end %>
+      <%= render partial: 'shared/form_errors', locals:{ f: f} %>
       <h1 class="mt-6 text-center text-3xl font-extrabold text-gray-900 mb-40">Group Our Projects</h1>  
         <div>
           <%= f.label :name, class: "mt-2 text-center text-xl text-gray-600 flex justify-center mb-10" %>

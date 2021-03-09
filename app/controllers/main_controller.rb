@@ -1,5 +1,3 @@
 class MainController < ApplicationController
-  def home
-    
-  end
+  def home; end
 end

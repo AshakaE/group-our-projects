@@ -5,7 +5,7 @@
 <div class="w-full space-y-8">
   <div class="text-center mb-5 flex flex-col">
     <img src="<%= current_user.icon %>" alt="" class="rounded-full border h-32 w-32 mb-2 mx-auto">
-    <h4 class="text-2xl"><%= current_user.name %></h4>
+    <%= link_to "#{current_user.name}", edit_user_path, class: "text-2xl" %>
   </div>
 
   <ul class="">

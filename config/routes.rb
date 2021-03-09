@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get '/projects/no-group', to: 'projects#no_group'
 
-  resources :users, only: %i[create show]
+  resources :users, only: %i[create show edit update]
 
   resources :projects, only: %i[index show new create]
 
