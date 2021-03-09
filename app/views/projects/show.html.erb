@@ -1,0 +1,38 @@
+<% provide(:title, 'Details') %>
+<div class="min-h-5 flex items-center justify-center content-between flex-wrap bg-gray-50 w-full">
+<ul class="mx-3 p-3">
+  <li class="">
+    <div class="mt-2 mb-4 flex">
+      <% if @project.group %>
+        <img src="<%= @project.group.icon %>" alt="" class="h-20 w-20 my-auto">
+      <% else %>
+        <div class="my-auto ml-2">
+          <small class="block text-center mt-5 font-bold">no group</small>
+        </div>
+      <% end %>
+      <h4 class="my-auto pl-3"><%= @project.name %></h4>
+    </div>
+    <p><%= @project.description %></p>
+  </li>
+
+  <li class="pt-3 flex justify-between">
+    <p class="">project no.<%= @project.id %></p>
+    <p class=""><small><%= @project.created_at.strftime('%d %b %Y at %l:%M%P') %></small></p>
+  </li>
+
+  <li class="flex justify-between p-0 pt-3">
+    <p class="m-0">AMOUNT</p>
+    <span class="font-bold"><%= number_with_precision(@project.amount, :precision => 2) %> hrs</span>
+  </li>
+</ul>
+
+<%= render partial: 'shared/flash' %>
+
+<div class="w-full text-center py-4 text-white bg-secondary px-6">
+    <div class="py-4 border-white border-2 rounded-lg hover:bg-secondaryDark">
+      <%= link_to new_project_path do %>
+        <span>NEW PROJECT</span>
+      <% end %>
+    </div>
+  </div>
+</div>
