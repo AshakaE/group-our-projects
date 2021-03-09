@@ -1,0 +1,11 @@
+ <%= link_to(group_url(group.id), class: "text-decoration-none w-full") do %>
+  <div class="flex flex-row justify-between w-full p-4 items-center bg-white border rounded-lg border-gray-300 mb-4 hover:shadow-md duration-200">
+    <img src="<%= group.icon %>" alt="" class="h-20 w-20 my-auto">
+    <p class="text-decoration-none h4 m-0 align-self-center px-1 overflow-hidden font-bold text-xl">
+      <%= group.name %>
+    </p>
+    <p class="m-0 pr-2 align-self-center text-center">
+      <small class=""><%= group.created_at.strftime('%d %b %Y') %></small>
+    </p>
+  </div>
+<% end %>

@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  include GroupsHelper
   before_action :signed_in_user, only: %i[new create index show]
 
   def new

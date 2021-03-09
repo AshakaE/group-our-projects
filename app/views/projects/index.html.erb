@@ -1,11 +1,15 @@
  <% provide(:title, 'Projects') %>
-<div class="min-h-5 flex items-center justify-center content-between flex-wrap bg-gray-50 w-full">
-  <div class="w-full flex justify-between items-center border-b-2 px-5 py-5">
+<div class="min-h-5 flex items-stretch justify-center flex-wrap bg-gray-50 w-full">
+  <div class="w-full flex self-start justify-between shadow-md rounded-lg items-center border-b-2 border-gray-300 px-5 py-5">
     <h5 class="text-xl">Total Amount</h5>
     <p class="font-bold"><%= number_with_precision(@projects.sum(:amount), :precision => 2) %> hrs</p>
   </div>
 
-  <div class="w-full text-center py-4 text-white bg-secondary px-6">
+  <div class="w-full -mt-44 mx-3 self-stretch">
+    <%= render @projects %>
+  </div>
+
+  <div class="w-full text-center self-end py-4 text-white bg-secondary px-6">
     <div class="py-4 border-white border-2 rounded-lg hover:bg-secondaryDark">
       <%= link_to new_project_path do %>
         <span>NEW PROJECT</span>

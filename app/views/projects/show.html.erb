@@ -1,12 +1,12 @@
 <% provide(:title, 'Details') %>
 <div class="min-h-5 flex items-center justify-center content-between flex-wrap bg-gray-50 w-full">
-<ul class="mx-3 p-3">
+<ul class="mx-3 p-3 w-full bg-white mt-3 border border-gray-300 rounded-md">
   <li class="">
-    <div class="mt-2 mb-4 flex">
+    <div class="mt-2 mb-4 flex h-32">
       <% if @project.group %>
         <img src="<%= @project.group.icon %>" alt="" class="h-20 w-20 my-auto">
       <% else %>
-        <div class="my-auto ml-2">
+        <div class="my-auto ml-2 h-28 w-28 border rounded-md border-gray-300">
           <small class="block text-center mt-5 font-bold">no group</small>
         </div>
       <% end %>
@@ -15,12 +15,12 @@
     <p><%= @project.description %></p>
   </li>
 
-  <li class="pt-3 flex justify-between">
+  <li class="pt-3 flex justify-between border-t mt-2">
     <p class="">project no.<%= @project.id %></p>
     <p class=""><small><%= @project.created_at.strftime('%d %b %Y at %l:%M%P') %></small></p>
   </li>
 
-  <li class="flex justify-between p-0 pt-3">
+  <li class="flex justify-between p-0 pt-3 border-t mt-2">
     <p class="m-0">AMOUNT</p>
     <span class="font-bold"><%= number_with_precision(@project.amount, :precision => 2) %> hrs</span>
   </li>

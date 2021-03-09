@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2021_03_07_130241) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_groups_on_name", unique: true
     t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
@@ -51,7 +52,7 @@ ActiveRecord::Schema.define(version: 2021_03_07_130241) do
     t.text "description"
     t.float "amount"
     t.bigint "user_id", null: false
-    t.bigint "group_id", null: false
+    t.bigint "group_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["group_id"], name: "index_projects_on_group_id"
@@ -63,6 +64,7 @@ ActiveRecord::Schema.define(version: 2021_03_07_130241) do
     t.string "icon"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_users_on_name", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
