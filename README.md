@@ -15,9 +15,9 @@
 
 <p align="center">
   
-  <img src="./app/assets/images/f1.jpg">
-  <img src="./app/assets/images/f2.jpg">
-  <img src="./app/assets/images/f3.jpg">
+  <img src="./app/assets/images/f1.jpg" width="33.3%">
+  <img src="./app/assets/images/f2.jpg" width="33.3%">
+  <img src="./app/assets/images/f3.jpg" width="33.3%">
   
 </p>
 
