@@ -13,6 +13,14 @@
 - A logged in user can see all the groups and he can associate a project to a group
 - A logged in user can create a group.
 
+<p align="center">
+  
+  <img src="app/assets/images/f1.png">
+  <img src="app/assets/images/f2.png">
+  <img src="app/assets/images/f3.png">
+  
+</p>
+
 ## Built With
 
 - Ruby v2.7.2
