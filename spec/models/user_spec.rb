@@ -30,5 +30,10 @@ RSpec.describe User, type: :model do
       subject.name = 'Sam'
       expect(subject).to_not be_valid
     end
+
+    it 'creates a user with a default avatar' do
+      @user = User.create(name: 'Ashaka')
+      expect(@user.icon.empty?).to eq false
+    end
   end
 end
