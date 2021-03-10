@@ -19,22 +19,6 @@ RSpec.feature 'Users', :type => :feature do
     click_on 'Logout'
     expect(page).to have_content('logged out')
   end
-  
-  scenario 'when a new user tries to create a name that exists already' do
-    visit "/"
-    click_on 'SIGN UP'
-    fill_in 'Name', with: 'Braun'
-    click_on 'SIGN UP'
-    expect(page).to have_content('Braun, your account was created successfully.')
-  end
-
-  scenario 'when a new user creates an account with valid and non-existing name' do
-    visit "/"
-    click_on 'SIGN UP'
-    fill_in 'Name', with: 'Ashaka'
-    click_on 'SIGN UP'
-    expect(page).to have_content('Name has already been taken')
-  end
 
   scenario 'when a user tries to change name to an already existing name' do
     click_on 'LOG IN'
@@ -51,8 +35,20 @@ RSpec.feature 'Users', :type => :feature do
     click_on 'Save changes'
     expect(page).to have_content('Your display name was successfully updated.')
   end
-end
+  
+  scenario 'when a new user tries to create a name that exists already' do
+    visit "/"
+    click_on 'SIGN UP'
+    fill_in 'Name', with: 'Ashaka'
+    click_on 'SIGN UP'
+    expect(page).to have_content('Name has already been taken')
+  end
 
-RSpec.feature 'Users', :type => :feature do
-
+  scenario 'when a new user creates an account with valid and non-existing name' do
+    visit "/"
+    click_on 'SIGN UP'
+    fill_in 'Name', with: 'Braun'
+    click_on 'SIGN UP'
+    expect(page).to have_content('Braun, your account was created successfully.')
+  end
 end
