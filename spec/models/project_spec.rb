@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
+
 RSpec.describe Project, type: :model do
   describe 'associations' do
     it 'should belong to user' do
@@ -68,3 +70,5 @@ RSpec.describe Project, type: :model do
     end
   end
 end
+
+# rubocop:enable Metrics/BlockLength

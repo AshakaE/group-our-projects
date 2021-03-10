@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
+
 RSpec.feature 'Users', type: :feature do
   before(:each) do
     User.create(name: 'Ashaka')
@@ -51,3 +53,5 @@ RSpec.feature 'Users', type: :feature do
     expect(page).to have_content('Braun, your account was created successfully.')
   end
 end
+
+# rubocop:enable Metrics/BlockLength

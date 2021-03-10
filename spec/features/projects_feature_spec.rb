@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
+
 RSpec.feature 'projects', type: :feature do
   let(:user) { User.create(name: 'Ashaka') }
 
@@ -63,3 +65,5 @@ RSpec.feature 'projects', type: :feature do
     expect(page).to have_content("Amount can't be blank")
   end
 end
+
+# rubocop:enable Metrics/BlockLength
