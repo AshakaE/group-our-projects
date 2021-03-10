@@ -2,3 +2,83 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.top-title {
+  @apply mb-0 mx-auto text-center font-bold text-white text-2xl mp:text-xl;
+}
+
+.new-name {
+  @apply appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm;
+}
+
+.sign-new {
+  @apply mt-8 relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primaryLight hover:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+}
+
+.sign-name {
+  @apply appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none duration-150 focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm;
+}
+
+.sign-container {
+  @apply min-h-full bg-gradient-to-bl from-primaryDark to-primaryLight py-12 sm:px-6 lg:px-14 w-full text-white;
+}
+
+.sign-button {
+  @apply mt-8 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primaryLight hover:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+}
+
+.log-button-home {
+  @apply mt-8 relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-primaryLight bg-white hover:text-white hover:bg-primaryLight focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+}
+
+.log-button {
+  @apply mt-8 relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primaryLight duration-150 hover:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+}
+
+.project-partial-container {
+  @apply mb-3 flex flex-row justify-between bg-white p-2 border border-gray-300 rounded-lg hover:shadow-md duration-200;
+}
+
+.nproject-name {
+  @apply my-3 py-2 pl-4 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md border;
+}
+
+.nproject-desp {
+  @apply border shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 pb-16 pl-4 pt-4 block w-full sm:text-sm border-gray-300 rounded-md;
+}
+
+.nproject-span {
+  @apply inline-flex items-center my-3 py-2 px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm;
+}
+
+.nproject-amount {
+  @apply border focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300 my-3 py-2 pl-4;
+}
+
+.nproject-select {
+  @apply mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+}
+
+.nproject-submit {
+  @apply px-8 py-3 rounded-md bg-primaryLight hover:bg-primaryDark text-white cursor-pointer duration-150;
+}
+
+.group-container {
+  @apply min-h-5 flex items-center justify-center content-between flex-wrap bg-gray-50 w-full;
+}
+
+.group-partial-container {
+  @apply flex flex-row justify-between w-full p-4 items-center bg-white border rounded-lg border-gray-300 mb-4 hover:shadow-md duration-200;
+}
+
+.ngroup-name {
+  @apply my-3 py-2 pl-4 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md border;
+}
+
+.ngroup-submit {
+  @apply px-8 py-3 rounded-md bg-primaryLight hover:bg-primaryDark text-white cursor-pointer duration-150;
+}
+
+.font-icon {
+  @apply flex justify-center items-center h-10 w-10 border border-white rounded-full text-center;
+}

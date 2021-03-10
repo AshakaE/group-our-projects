@@ -1,11 +1,10 @@
 require 'rails_helper'
 
-RSpec.feature 'Users', :type => :feature do
-
+RSpec.feature 'Users', type: :feature do
   before(:each) do
     User.create(name: 'Ashaka')
     User.create(name: 'Voris')
-    visit "/"
+    visit '/'
     click_on 'LOG IN'
     fill_in 'Name', with: 'Ashaka'
   end
@@ -35,9 +34,9 @@ RSpec.feature 'Users', :type => :feature do
     click_on 'Save changes'
     expect(page).to have_content('Your display name was successfully updated.')
   end
-  
+
   scenario 'when a new user tries to create a name that exists already' do
-    visit "/"
+    visit '/'
     click_on 'SIGN UP'
     fill_in 'Name', with: 'Ashaka'
     click_on 'SIGN UP'
@@ -45,7 +44,7 @@ RSpec.feature 'Users', :type => :feature do
   end
 
   scenario 'when a new user creates an account with valid and non-existing name' do
-    visit "/"
+    visit '/'
     click_on 'SIGN UP'
     fill_in 'Name', with: 'Braun'
     click_on 'SIGN UP'

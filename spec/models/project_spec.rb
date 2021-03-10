@@ -20,7 +20,6 @@ RSpec.describe Project, type: :model do
   end
 end
 
-
 RSpec.describe Project, type: :model do
   before(:all) do
     @user = User.create(name: 'User')
@@ -29,16 +28,16 @@ RSpec.describe Project, type: :model do
   context 'test with one created user' do
     before(:each) do
       @project1 = Project.create(name: 'project01',
-                                      description: 'description for trans 01',
-                                      amount: 0.50,
-                                      user_id: @user.id)
+                                 description: 'description for trans 01',
+                                 amount: 0.50,
+                                 user_id: @user.id)
     end
 
     it "doesn't create a project with an empty name, amount or description" do
       @project2 = Project.create(name: '',
-                                         description: '',
-                                         amount: nil,
-                                         user_id: @user.id)
+                                 description: '',
+                                 amount: nil,
+                                 user_id: @user.id)
       expect(@project2.valid?).to eq false
     end
 
@@ -52,9 +51,9 @@ RSpec.describe Project, type: :model do
     it 'creates a project only if the name is unique' do
       @project1 = Project.create(name: '')
       @project2 = Project.create(name: @project1.name.to_s,
-                                         description: 'description for trans 01',
-                                         amount: 10.160,
-                                         user_id: @user.id)
+                                 description: 'description for trans 01',
+                                 amount: 10.160,
+                                 user_id: @user.id)
       expect(@project2.valid?).to eq false
     end
 
@@ -69,4 +68,3 @@ RSpec.describe Project, type: :model do
     end
   end
 end
-

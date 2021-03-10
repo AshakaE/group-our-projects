@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'groups', :type => :feature do
+RSpec.feature 'groups', type: :feature do
   let(:user) { User.create(name: 'Ashaka') }
 
   before(:each) do
@@ -8,7 +8,7 @@ RSpec.feature 'groups', :type => :feature do
   end
 
   scenario 'when a user Creates a Group ' do
-    visit "/"
+    visit '/'
     click_on 'LOG IN'
     fill_in 'Name', with: 'Ashaka'
     click_on 'LOG IN'
@@ -20,7 +20,7 @@ RSpec.feature 'groups', :type => :feature do
   end
 
   scenario 'when a user Creates a Group with no name ' do
-    visit "/"
+    visit '/'
     click_on 'LOG IN'
     fill_in 'Name', with: 'Ashaka'
     click_on 'LOG IN'

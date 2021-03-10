@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'projects', :type => :feature do
+RSpec.feature 'projects', type: :feature do
   let(:user) { User.create(name: 'Ashaka') }
 
   before(:each) do
@@ -8,7 +8,7 @@ RSpec.feature 'projects', :type => :feature do
   end
 
   scenario 'when a user Creates a Project' do
-    visit "/"
+    visit '/'
     click_on 'LOG IN'
     fill_in 'Name', with: 'Ashaka'
     click_on 'LOG IN'
@@ -22,7 +22,7 @@ RSpec.feature 'projects', :type => :feature do
   end
 
   scenario 'when a user Creates a Project with name < 4 chars' do
-    visit "/"
+    visit '/'
     click_on 'LOG IN'
     fill_in 'Name', with: 'Ashaka'
     click_on 'LOG IN'
@@ -36,7 +36,7 @@ RSpec.feature 'projects', :type => :feature do
   end
 
   scenario 'when a user Creates a Project with description < 10 chars' do
-    visit "/"
+    visit '/'
     click_on 'LOG IN'
     fill_in 'Name', with: 'Ashaka'
     click_on 'LOG IN'
@@ -50,7 +50,7 @@ RSpec.feature 'projects', :type => :feature do
   end
 
   scenario 'when a user Creates a Project with no amount(hrs)' do
-    visit "/"
+    visit '/'
     click_on 'LOG IN'
     fill_in 'Name', with: 'Ashaka'
     click_on 'LOG IN'

@@ -13,7 +13,6 @@ RSpec.describe Group, type: :model do
   end
 end
 
-
 RSpec.describe Group, type: :model do
   before(:all) do
     @user = User.create(name: 'User')
@@ -54,4 +53,3 @@ RSpec.describe Group, type: :model do
     end
   end
 end
-

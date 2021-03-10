@@ -1,11 +1,11 @@
 <% provide(:title, 'New Group') %>
-<div class="min-h-5 flex items-center justify-center content-between flex-wrap bg-gray-50 w-full">
+<div class="group-container">
 <div class="w-full space-y-8">
 <%= form_for @group, html: { class: "mt-5 mx-3" } do |f| %>
   <%= render  partial: 'shared/flash', locals: { model: @group } %>
   <%= render partial: 'shared/form_errors', locals:{ f: f} %>
   <div>
-    <%= f.text_field :name, class: "my-3 py-2 pl-4 focus:ring-indigo-500 focus:border-red block w-full shadow-sm sm:text-sm border-gray-300 rounded-md border", placeholder: "Name" %>
+    <%= f.text_field :name, class: "ngroup-name", placeholder: "Name" %>
   </div>
     <ul class="bg-white border border-gray-300 rounded-md">
       <p class=" text-muted w-100 text-center border-b border-gray-300 py-2">select a group</p>
@@ -22,7 +22,7 @@
     </ul>
 
   <div class="mt-6 flex flex-col items-center">
-     <%= f.submit class: "px-8 py-3 rounded-md bg-primaryLight hover:bg-primaryDark text-white cursor-pointer duration-150" %>
+     <%= f.submit class: "" %>
   </div>
 <% end %>
 </div>
