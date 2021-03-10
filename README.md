@@ -1,6 +1,17 @@
-# Title TBA
+# Group Our Projects
 
-> Description TBA
+> This is a Microvers Ruby on Rails capstone project, it is an app for grouping projects with a time constraint(Hours), it can be used to organise team projects.
+
+## Features
+
+- The user logs into the app by typing the user name
+- The user is presented with a profile page that includes links to:
+  - All my projects
+  - All my external projects
+  - All groupss
+- A logged in user can only see the list of projects he created.
+- A logged in user can see all the groups and he can associate a project to a group
+- A logged in user can create a group.
 
 ## Built With
 
@@ -9,7 +20,7 @@
 
 ## Live Demo
 
-TBA
+[Live Demo](https://www.loom.com/share/c45ca4c02b6d462ba68bd2a807de8ec7)
 
 ## Getting Started
 
@@ -47,7 +58,7 @@ Postgres: >=12.5
 
 ### Deployment
 
-TBA
+Application deployed to Heroku
 
 👤 **Ashaka Egerega**
 
@@ -58,15 +69,18 @@ TBA
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/AshakaE/group-our-projects/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
+Design concept by [Gregoire Vella](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 
-TBA
+Reference for [N + 1](https://www.youtube.com/watch?v=oJ4Ur5XPAF8&ab_channel=BrianMorearty) problem.
+
+Hat tip to [@David](https://github.com/Davidosky007) for code citing.
 
 ## 📝 License
 
