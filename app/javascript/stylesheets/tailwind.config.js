@@ -43,7 +43,7 @@ module.exports = {
       'sp': "320px",
       // => @media (min-width: 320px) { ... }
 
-      'mp': "480px",
+      'mp': { max: "480px"},
       // => @media (min-width: 480px) { ... }
 
       'sm': "640px",

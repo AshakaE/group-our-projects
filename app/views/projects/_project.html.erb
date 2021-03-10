@@ -9,7 +9,7 @@
         </div>
       <% end %>
     </div>
-    <div class="right-content flex-grow">
+    <div class="right-content flex-grow mp:text-sm">
       <div class="flex p-3 justify-between">
         <h5 class=""><%= project.name %></h5>
         <p class="font-medium m-0">
@@ -25,7 +25,7 @@
         </p>
 
         <% if controller_name == 'groups' && action_name == 'show' %>
-          <p class="font-bold mr-3 text-md"> <small class="font-medium">created by </small> <%= project.user.name %></p>
+          <p class="font-bold mr-3 text-md"> <small class="font-medium mr-1">created by </small> <%= project.user.name %></p>
         <% end %>
       </div>
     </div>
