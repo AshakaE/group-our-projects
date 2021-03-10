@@ -1,0 +1,20 @@
+<div class="flex items-center w-full min-h-1 bg-primaryDark">
+  <nav class="navbar navbar-dark flex justify-between content-center w-full px-4">
+    <div class="self-center text-xl">
+      <% if logged_in? %>
+        <a href="/users/<%= current_user.id %>">
+      <% else %>
+        <a href="/">
+      <% end %>
+        <button class="focus:outline-none">
+          <i class="far fa-bars text-white"></i>
+        </button>
+      </a>
+    </div>
+
+    <div class="">
+      <h4 class="top-title"><%= yield(:title).upcase %></h4>
+    </div>
+    <div></div>
+  </nav>
+</div>

@@ -1,0 +1,31 @@
+<% provide(:title, 'Group Details') %>
+<div class="group-container">
+<ul class="mx-3 p-3 w-full mb-3">
+  <li class="flex justify-between border-b w-full items-center mb-3 pb-3">
+    <h4 class="text-decoration-none h4 m-0 align-self-center px-1 overflow-hidden font-bold text-xl"><%= @group.name %></h4>
+    <img src="<%= @group.icon %>" alt="" class="h-20 w-20 my-auto">
+  </li>
+
+  <li class="p-0 pt-3 w-full">
+    <%= render @projects %>
+  </li>
+
+  <li class="flex justify-between mt-3 mb-3  p-2 bg-white border border-gray-300 rounded-lg mp:text-sm">
+    <p class="font-medium ">TOTAL AMOUNT</p>
+    <span class="font-bold"><%= number_with_precision(@projects.sum(:amount), :precision => 2) %> hrs</span>
+  </li>
+</ul>
+
+  <%= render partial: 'shared/flash' %>
+  <div class="text-lg text-center w-full mt-10 pt-40">
+    <%= link_to 'Go back', groups_path, class: "p-3 rounded-md text-white bg-primaryLight hover:bg-primaryDark duration-150" %>
+  </div>
+
+<div class="w-full text-center py-4 text-white bg-secondary px-6">
+    <div class="py-4 border-white border-2 rounded-lg hover:bg-secondaryDark duration-200">
+      <%= link_to new_group_path do %>
+        <span>NEW GROUP</span>
+      <% end %>
+    </div>
+  </div>
+</div>

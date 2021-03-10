@@ -1,0 +1,33 @@
+<a href="<%= project_url(project.id) %>" class="text-decoration-none">
+  <div class="project-partial-container">
+    <div class="my-auto h-20 w-20">
+      <% if project.group %>
+        <img src="<%= project.group.icon %>" alt="" class="h-20 w-20 my-auto">
+      <% else %>
+        <div class="my-auto h-20 w-20 border rounded-md border-gray-300">
+          <small class="block text-center mt-5 font-bold">no group</small>
+        </div>
+      <% end %>
+    </div>
+    <div class="right-content flex-grow mp:text-sm">
+      <div class="flex p-3 justify-between">
+        <h5 class=""><%= project.name %></h5>
+        <p class="font-medium m-0">
+          <%= number_with_precision(project.amount, :precision => 2) %> hrs
+        </p>
+      </div>
+
+      <div class="flex justify-between">
+        <p class="ml-3">
+          <small class="">
+            <%= project.created_at.strftime('%d %b %Y') %>
+          </small>
+        </p>
+
+        <% if controller_name == 'groups' && action_name == 'show' %>
+          <p class="font-bold mr-3 text-md"> <small class="font-medium mr-1">created by </small> <%= project.user.name %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</a>
