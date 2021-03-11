@@ -39,7 +39,7 @@
           </li>
         </ul>
         
-      <%= render partial: 'shared/form_errors', locals:{ f: f} %>
+      <%= show_errors(@user) %>
       <%= show_alive %>
   <% end %>
   </div>

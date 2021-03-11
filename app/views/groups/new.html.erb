@@ -2,8 +2,8 @@
 <div class="group-container">
 <div class="w-full space-y-8">
 <%= form_for @group, html: { class: "mt-5 mx-3" } do |f| %>
-  <%= render  partial: 'shared/flash', locals: { model: @group } %>
-  <%= render partial: 'shared/form_errors', locals:{ f: f} %>
+  <%= show_alive %>
+  <%= show_errors(@group) %>
   <div>
     <%= f.text_field :name, class: "ngroup-name", placeholder: "Name" %>
   </div>

@@ -8,4 +8,16 @@ module ApplicationHelper
       render(partial: 'shared/warning')
     end
   end
+
+  def show_errors(inst)
+    content = ''
+    if inst.errors.any?
+      inst.errors.full_messages.each do |m|
+        content << "<div class='bg-red-100 text-red-900 px-5 py-3 rounded-md mp:mx-3 text-center'>
+                      <div>#{m}</div>
+                    </div>"
+      end
+    end
+    content.html_safe
+  end
 end

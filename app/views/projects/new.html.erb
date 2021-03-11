@@ -2,7 +2,7 @@
 <div class="min-h-5 flex items-center justify-center content-between flex-wrap bg-gray-50 w-full">
 <div class="w-full space-y-8">
   <%= form_for @project, html: { class: "mt-5 mx-3" } do |f| %>
-    <%= render partial: 'shared/form_errors', locals:{ f: f} %>
+      <%= show_errors(@project) %>
       <div>
         <%= f.text_field :name, class: "nproject-name", placeholder: "Name" %>
       </div>

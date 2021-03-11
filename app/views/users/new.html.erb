@@ -1,7 +1,7 @@
   <% provide(:title, 'Home') %>
   <div class="max-w-md w-full space-y-8">
     <%= form_with model: @user, url: sign_up_path do |f| %>
-      <%= render partial: 'shared/form_errors', locals:{ f: f} %>
+      <%= show_errors(@user) %>
       <h1 class="mt-6 text-center text-3xl font-extrabold text-gray-900 mb-40">Group Our Projects</h1> 
       <div class="mp:mx-3">
           <div>
