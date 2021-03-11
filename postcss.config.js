@@ -1,18 +1,18 @@
- let environment = {
+let environment = {
   plugins: [
-    require('tailwindcss')('./app/javascript/stylesheets/tailwind.config.js'),
-    require('postcss-import'),
-    require('postcss-flexbugs-fixes'),
-    require('postcss-preset-env')({
+    require("tailwindcss")("./app/javascript/stylesheets/tailwind.config.js"),
+    require("postcss-import"),
+    require("postcss-flexbugs-fixes"),
+    require("postcss-preset-env")({
       autoprefixer: {
-        flexbox: 'no-2009'
+        flexbox: "no-2009",
       },
-      stage: 3
+      stage: 3,
     }),
-  ]
-}
+  ],
+};
 
-if (process.env.RAILS_ENV === 'production') {
+if (process.env.RAILS_ENV === "production") {
   environment.plugins.push(
     // require("tailwindcss"),
     require("autoprefixer"),
@@ -27,4 +27,4 @@ if (process.env.RAILS_ENV === 'production') {
     })
   );
 }
-module.exports = environment
+module.exports = environment;
