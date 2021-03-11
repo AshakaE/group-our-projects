@@ -20,4 +20,10 @@ module ApplicationHelper
     end
     content.html_safe
   end
+
+  def navbar(name) 
+    unless name == 'Home' || name == 'Profile' 
+      render(partial: 'layouts/nav')
+    end 
+  end
 end
