@@ -15,8 +15,6 @@
     <span class="font-bold"><%= number_with_precision(@projects.sum(:amount), :precision => 2) %> hrs</span>
   </li>
 </ul>
-
-  <%= render partial: 'shared/flash' %>
   <div class="text-lg text-center w-full mt-10 pt-40">
     <%= link_to 'Go back', groups_path, class: "p-3 rounded-md text-white bg-primaryLight hover:bg-primaryDark duration-150" %>
   </div>

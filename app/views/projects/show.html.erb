@@ -25,8 +25,7 @@
     <span class="font-bold"><%= number_with_precision(@project.amount, :precision => 2) %> hrs</span>
   </li>
 </ul>
-
-<%= render partial: 'shared/flash' %>
+<%= show_alive %>
 <div class="w-full text-center py-4 text-white bg-secondary px-6">
     <div class="py-4 border-white border-2 rounded-lg hover:bg-secondaryDark duration-200">
       <%= link_to new_project_path do %>
