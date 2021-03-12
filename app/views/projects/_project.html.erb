@@ -17,10 +17,7 @@
             <%= project.created_at.strftime('%d %b %Y') %>
           </small>
         </p>
-
-        <% if controller_name == 'groups' && action_name == 'show' %>
-          <p class="font-bold mr-3 text-md"> <small class="font-medium mr-1">created by </small> <%= project.user.name %></p>
-        <% end %>
+        <%= show_proj_name(project) %>    
       </div>
     </div>
   </div>

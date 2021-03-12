@@ -9,15 +9,8 @@
   </div>
     <ul class="bg-white border border-gray-300 rounded-md">
       <p class=" text-muted w-100 text-center border-b border-gray-300 py-2">select a group</p>
-        <div class="grid grid-cols-5">
-            <% 1.upto(20) do |i| %>
-              <li class="p-4 m-1">
-                <%= f.radio_button :icon, @icons[i]['link'], class: "focus:ring-secondary h-4 w-4 text-secondary border-gray-300" %>
-                <%= f.label :icon, value: @icons[i]['link'], class: "w-2 h-2 py-4" do %>
-                  <img src="<%= @icons[i]['link']%>" alt="" class="w-14 h-14">
-                <% end %>
-              </li>
-            <% end %>
+        <div class="grid grid-cols-5">           
+            <%= show_icons(f) %>
         </div>
     </ul>
 

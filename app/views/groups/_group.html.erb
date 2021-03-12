@@ -1,4 +1,4 @@
- <%= link_to(group_url(group.id), class: "text-decoration-none w-full") do %>
+ <a href="<%= group_url(group.id) %>" class="text-decoration-none w-full">
   <div class="group-partial-container">
     <img src="<%= group.icon %>" alt="" class="h-20 w-20 my-auto">
     <p class="text-decoration-none h4 m-0 align-self-center px-1 overflow-hidden font-bold text-lg mp:text-sm">
@@ -8,4 +8,4 @@
       <small class=""><%= group.created_at.strftime('%d %b %Y') %></small>
     </p>
   </div>
-<% end %>
+</a>
