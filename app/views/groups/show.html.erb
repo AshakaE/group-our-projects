@@ -1,6 +1,7 @@
 <% provide(:title, 'Group Details') %>
 <div class="group-container">
 <ul class="mx-3 p-3 w-full mb-3">
+  <%= show_alive %>
   <li class="flex justify-between border-b w-full items-center mb-3 pb-3">
     <h4 class="text-decoration-none h4 m-0 align-self-center px-1 overflow-hidden font-bold text-xl"><%= @group.name %></h4>
     <img src="<%= @group.icon %>" alt="" class="h-20 w-20 my-auto">

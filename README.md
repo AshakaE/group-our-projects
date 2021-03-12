@@ -25,10 +25,11 @@
 
 - Ruby v2.7.2
 - Ruby on Rails v5.2.4
+- TailwindCSS v2.0.3
 
 ## Live Demo
 
-[Live Demo](https://www.loom.com/share/fada7e2ba52e43afa0705075c9a247bd)
+[Live Demo](https://mighty-badlands-86456.herokuapp.com/)
 
 ## Getting Started
 
