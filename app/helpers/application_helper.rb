@@ -22,6 +22,18 @@ module ApplicationHelper
   end
 
   def navbar(name)
-    render(partial: 'layouts/nav') unless name == 'Home' || name == 'Profile'
+    render(partial: 'layouts/nav') unless %w[Home Profile].any? name
+  end
+
+  def show_project(project)
+    content = ''
+    if project.group
+      content << "<img src=' #{project.group.icon} ' alt='' class='h-20 w-20 my-auto'>"
+    else 
+      content << "<div class='my-auto h-20 w-20 border rounded-md border-gray-300'>
+                  <small class='block text-center mt-5 font-bold'>no group</small>
+                  </div>"
+    end
+    content.html_safe
   end
 end

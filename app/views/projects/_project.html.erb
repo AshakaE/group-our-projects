@@ -1,13 +1,8 @@
 <a href="<%= project_url(project.id) %>" class="text-decoration-none">
   <div class="project-partial-container">
     <div class="my-auto h-20 w-20">
-      <% if project.group %>
-        <img src="<%= project.group.icon %>" alt="" class="h-20 w-20 my-auto">
-      <% else %>
-        <div class="my-auto h-20 w-20 border rounded-md border-gray-300">
-          <small class="block text-center mt-5 font-bold">no group</small>
-        </div>
-      <% end %>
+      
+      <%= show_project(project) %>
     </div>
     <div class="right-content flex-grow mp:text-sm">
       <div class="flex p-3 justify-between">
