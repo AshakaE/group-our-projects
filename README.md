@@ -1,6 +1,6 @@
 # Group Our Projects
 
-> This is a Microvers Ruby on Rails capstone project, it is an app for grouping projects with a time constraint(Hours), it can be used to organize team projects.
+> This is a Microverse Ruby on Rails capstone project, it is an app for grouping projects with a time constraint(Hours), it can be used to organize team projects.
 
 ## Features
 
