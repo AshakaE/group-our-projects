@@ -82,5 +82,3 @@ test:
 production:
   <<: *default
   database: group_our_projects_production
-  username: group_our_projects
-  password: <%= ENV['GROUP_OUR_PROJECTS_DATABASE_PASSWORD'] %>
