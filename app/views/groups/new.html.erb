@@ -1,0 +1,22 @@
+<% provide(:title, 'New Group') %>
+<div class="group-container">
+<div class="w-full space-y-8">
+<%= form_for @group, html: { class: "mt-5 mx-3" } do |f| %>
+  <%= show_alive %>
+  <%= show_errors(@group) %>
+  <div>
+    <%= f.text_field :name, class: "ngroup-name", placeholder: "Name" %>
+  </div>
+    <ul class="bg-white border border-gray-300 rounded-md">
+      <p class=" text-muted w-100 text-center border-b border-gray-300 py-2">select a group</p>
+        <div class="grid grid-cols-5">           
+            <%= show_icons(f) %>
+        </div>
+    </ul>
+
+  <div class="mt-6 flex flex-col items-center">
+     <%= f.submit class: "ngroup-submit" %>
+  </div>
+<% end %>
+</div>
+</div>

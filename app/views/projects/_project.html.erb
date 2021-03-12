@@ -1,0 +1,24 @@
+<a href="<%= project_url(project.id) %>" class="text-decoration-none">
+  <div class="project-partial-container">
+    <div class="my-auto h-20 w-20">
+      <%= show_project(project) %>
+    </div>
+    <div class="right-content flex-grow mp:text-sm">
+      <div class="flex p-3 justify-between">
+        <h5 class=""><%= project.name %></h5>
+        <p class="font-medium m-0">
+          <%= number_with_precision(project.amount, :precision => 2) %> hrs
+        </p>
+      </div>
+
+      <div class="flex justify-between">
+        <p class="ml-3">
+          <small class="">
+            <%= project.created_at.strftime('%d %b %Y') %>
+          </small>
+        </p>
+        <%= show_proj_name(project) %>    
+      </div>
+    </div>
+  </div>
+</a>

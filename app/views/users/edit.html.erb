@@ -1,0 +1,49 @@
+<% provide(:title, 'Profile') %>
+
+<div class="sign-container">
+<div class="w-full space-y-8">
+  <div class="text-center mb-5 flex flex-col mp:mx-3">
+    <h1 class="mt-6 text-center text-3xl font-extrabold text-white mb-20">Edit Name</h1>  
+    <img src="<%= current_user.icon %>" alt="" class="rounded-full border h-32 w-32 mb-2 mx-auto">
+    <h4 class="text-2xl mb-6"><%= current_user.name %></h4>
+    <%= form_with(model: @user, local: true) do |f|%>
+        <div>
+          <%= f.text_field :name, class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm", placeholder: "#{current_user.name}" %>
+        </div>
+        <ul class="mt-8">
+          <li class="mb-6 flex">
+            <div class="inline-block pr-4">
+                <div class="flex justify-center items-center">
+                  <div class="flex justify-center items-center text-md h-10 w-10 border border-white rounded-full text-center">
+                    <div class="fal fa-undo-alt"></div>
+                  </div>
+                </div>
+            </div>
+            </i>
+            <div class="border-b border-white py-2 w-full flex">
+              <%= link_to 'Go back', user_path %>
+            </div>
+          </li>
+          <li class="mb-6 flex">
+            <div class="inline-block pr-4">
+                <div class="flex justify-center items-center">
+                  <div class="flex justify-center items-center text-md h-10 w-10 border border-white rounded-full text-center">
+                    <div class="fal fa-save"></div>
+                  </div>
+                </div>
+            </div>
+            </i>
+            <div class="border-b border-white py-2 w-full flex">
+              <%= f.submit 'Save changes', class: "no-underline cursor-pointer bg-transparent focus:outline-none" %>
+            </div>
+          </li>
+        </ul>
+        
+      <%= show_errors(@user) %>
+      <%= show_alive %>
+  <% end %>
+  </div>
+</div>
+</div>
+
+

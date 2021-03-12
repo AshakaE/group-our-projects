@@ -1,0 +1,65 @@
+<% provide(:title, 'Profile') %>
+
+<div class="sign-container">
+<%= show_alive %>
+<div class="w-full space-y-8">
+  <div class="text-center mb-5 flex flex-col">
+    <img src="<%= current_user.icon %>" alt="" class="rounded-full border h-32 w-32 mb-2 mx-auto">
+    <%= link_to "#{current_user.name}", edit_user_path, class: "text-2xl" %>
+  </div>
+
+  <ul class="mp:mx-3">
+    <li class="mb-6 flex">
+      <div class="inline-block pr-4">
+          <div class="flex justify-center items-center">
+            <div class="font-icon">
+              <div class="fal fa-project-diagram"></div>
+            </div>
+          </div>
+      </div>
+      </i>
+      <div class="border-b border-white pt-2 w-full">
+        <%= link_to 'All my projects', projects_path %>
+      </div>
+    </li>
+    <li class="mb-6 flex">
+      <div class="inline-block pr-4">
+        <div class="flex justify-center items-center">
+          <div class="font-icon">
+            <div class="fal fa-tasks-alt"></div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b border-white pt-2 w-full">
+        <%= link_to 'All my external projects', projects_no_group_path%>
+      </div>
+    </li>
+    <li class="mb-6 flex">
+      <div class="inline-block pr-4">
+        <div class="flex justify-center items-center">
+          <div class="font-icon">
+            <div class="fal fa-layer-group"></div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b border-white pt-2 w-full">
+        <%= link_to 'All groups', groups_path%>
+      </div>
+    </li>
+    <li class="mb-6 flex ">
+      <div class="inline-block pr-4">
+        <div class="flex justify-center items-center">
+          <div class="font-icon">
+            <div class="fal fa-power-off"></div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b border-white pt-2 w-full">
+        <%= link_to  "Logout", logout_url, method: :delete %>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+
+

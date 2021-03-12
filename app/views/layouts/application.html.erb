@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GroupOurProjects</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+  </head>
+
+  <body class="font-body bg-primaryLight min-h-screen">
+    
+    <div class="max-w-2xl flex flex-1 flex-col items-center justify-center bg-gray-50 mx-auto min-h-full">
+
+        <%= navbar yield(:title) %>
+    
+        <%= yield %>
+
+    </div>
+  </body>
+</html>

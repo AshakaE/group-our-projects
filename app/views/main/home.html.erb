@@ -1,0 +1,12 @@
+ <% provide(:title, 'Home') %>
+<div class="min-h-full flex items-center justify-center bg-gray-50 w-10/12">
+  <div class="flex-auto my-20 space-y-8">
+    <%= show_alive %>
+      <h1 class="mt-6 text-center text-3xl font-extrabold text-gray-900 mb-3">Group Our Projects</h1>  
+      <div class="mb-3">
+            <%= link_to 'SIGN UP', sign_up_path, class: 'sign-button' %>
+
+            <%= link_to 'LOG IN', sign_in_path, class: 'log-button-home' %>
+      </div>
+  </div>
+</div>

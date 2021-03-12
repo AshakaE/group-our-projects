@@ -1,0 +1,21 @@
+  <% provide(:title, 'Home') %>
+  <div class="max-w-md w-full space-y-8">
+    <%= form_with model: @user, url: sign_up_path do |f| %>
+      <%= show_errors(@user) %>
+      <h1 class="mt-6 text-center text-3xl font-extrabold text-gray-900 mb-40">Group Our Projects</h1> 
+      <div class="mp:mx-3">
+          <div>
+            <%= f.label :name, class: "mt-2 text-center text-xl text-gray-600 flex justify-center mb-10" %>
+            <%= f.text_field :name, class: "new-name", placeholder: 'Name' %>
+          </div>
+        <div class="mb-3">
+          <%= f.submit 'SIGN UP', class: 'sign-new' %>
+        </div>
+        <div class="flex text-sm justify-center">
+          <p class="pr-1">Already have an account?</p>
+          <%= link_to 'Log in', sign_in_path, class: "text-primaryLight font-bold" %>
+        </div>
+      </div> 
+    <% end %>
+  </div>
+

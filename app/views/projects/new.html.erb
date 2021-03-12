@@ -1,0 +1,27 @@
+<% provide(:title, 'New Project') %>
+<div class="min-h-5 flex items-center justify-center content-between flex-wrap bg-gray-50 w-full">
+<div class="w-full space-y-8">
+  <%= form_for @project, html: { class: "mt-5 mx-3" } do |f| %>
+      <%= show_errors(@project) %>
+      <div>
+        <%= f.text_field :name, class: "nproject-name", placeholder: "Name" %>
+      </div>
+      <div>
+        <%= f.text_area :description, class: "nproject-desp", placeholder: "Description" %>
+      </div>
+      <div class="mt-1 flex rounded-md shadow-sm">
+          <span class="nproject-span">Hours</span>
+          <%= f.number_field :amount, class: "nproject-amount", placeholder: "Amount", min: "0", step: "0.01" %>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="w-full">
+          <%= collection_select(:project, :group_id, Group.all, :id, :name, { :prompt => 'Group' }, class: "nproject-select" ) %>
+        </div>
+        <div class="mt-6">
+          <%= f.submit class: "nproject-submit" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
