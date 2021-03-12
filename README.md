@@ -15,9 +15,9 @@
 
 <p align="center">
   
-  <img src="./app/assets/images/f1.jpg" >
-  <img src="./app/assets/images/f2.jpg" >
-  <img src="./app/assets/images/f3.jpg" >
+  <img src="./screenshots/f1.jpg" >
+  <img src="./screenshots/f2.jpg" >
+  <img src="./screenshots/f3.jpg" >
   
 </p>
 
